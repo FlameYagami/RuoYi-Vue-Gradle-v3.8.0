@@ -1,0 +1,102 @@
+# status: 共有8个级别，按照从低到高为：ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+# monitorInterval: 设置配置文件的动态加载时间的，单位是秒
+Configuration:
+  status: WARN
+  monitorInterval: 60
+  Properties: # 定义全局变量
+    Property:
+      - name: log.path
+        value: /home/project/logs
+      - name: log.name
+        value: ry
+      - name: log.size
+        value: 200MB
+      - name: log.pattern
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] %C [%L] -> %m%n"
+  Appenders:
+    Console: # 输出到控制台
+      name: STDOUT
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] %C [%L] -> %m%n"
+    RollingFile: # 日志文件输出设置
+      # 基本日志
+      - name: FILE
+        fileName: ${log.path}/ry.log
+        filePattern: "${log.path}/$${date:yyyy-MM}/${log.name}-%d{yyyyMMdd}-%i.log"
+        PatternLayout:
+          pattern: ${log.pattern}
+        Policies:
+          TimeBasedTriggeringPolicy: # 按天分类
+            modulate: true
+            interval: 1
+          SizeBasedTriggeringPolicy: # 按大小
+            size: ${log.size}
+        DefaultRolloverStrategy:
+          Delete:
+            basePath: ${log.path}
+            maxDepth: 2
+            IfFileName:
+              glob: "${log.name}*.log"
+            IfLastModified:
+              age: "31d"
+      # 警告日志
+      - name: WARN
+        fileName: ${log.path}/ry-warn.log
+        filePattern: "${log.path}/$${date:yyyy-MM}/${log.name}-%d{yyyyMMdd}-%i.warn.log"
+        PatternLayout:
+          pattern: ${log.pattern}
+        Filters:
+          ThresholdFilter: # 一定要先去除不接受的日志级别，然后获取需要接受的日志级别
+            - level: error
+              onMatch: DENY
+              onMismatch: NEUTRAL
+            - level: warn
+              onMatch: ACCEPT
+              onMismatch: DENY
+        Policies:
+          TimeBasedTriggeringPolicy: # 按天分类
+            modulate: true
+            interval: 1
+          SizeBasedTriggeringPolicy: # 按大小
+            size: ${log.size}
+        DefaultRolloverStrategy:
+          Delete:
+            basePath: ${log.path}
+            maxDepth: 2
+            IfFileName:
+              glob: "${log.name}*.log"
+            IfLastModified:
+              age: "31d"
+      # 错误日志
+      - name: ERROR
+        fileName: ${log.path}/ry-error.log
+        filePattern: "${log.path}/$${date:yyyy-MM}/${log.name}-%d{yyyyMMdd}-%i.error.log"
+        PatternLayout:
+          pattern: ${log.pattern}
+        Filters:
+          ThresholdFilter: # 一定要先去除不接受的日志级别，然后获取需要接受的日志级别
+            - level: error
+              onMatch: ACCEPT
+              onMismatch: DENY
+        Policies:
+          TimeBasedTriggeringPolicy: # 按天分类
+            modulate: true
+            interval: 1
+          SizeBasedTriggeringPolicy: # 按大小
+            size: ${log.size}
+        DefaultRolloverStrategy:
+          Delete:
+            basePath: ${log.path}
+            maxDepth: 2
+            IfFileName:
+              glob: "${log.name}*.log"
+            IfLastModified:
+              age: "31d"
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: FILE
+        - ref: WARN
+        - ref: ERROR
