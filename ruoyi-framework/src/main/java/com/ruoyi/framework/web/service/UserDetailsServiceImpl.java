@@ -1,11 +1,11 @@
 package com.ruoyi.framework.web.service;
 
-import com.ruoyi.common.core.domain.entity.SysUser;
-import com.ruoyi.common.core.domain.model.LoginUser;
+import com.ruoyi.common.model.entity.SysUser;
+import com.ruoyi.common.model.dto.LoginUser;
 import com.ruoyi.common.enums.UserStatus;
 import com.ruoyi.common.exception.ServiceException;
 import com.ruoyi.common.utils.StringUtils;
-import com.ruoyi.system.service.ISysUserService;
+import com.ruoyi.system.service.intf.ISysUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

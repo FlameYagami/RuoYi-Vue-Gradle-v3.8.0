@@ -1,6 +1,6 @@
 package com.ruoyi.admin.controller.monitor;
 
-import com.ruoyi.common.core.domain.AjaxResult;
+import com.ruoyi.common.model.base.AjaxResult;
 import com.ruoyi.framework.web.domain.Server;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;

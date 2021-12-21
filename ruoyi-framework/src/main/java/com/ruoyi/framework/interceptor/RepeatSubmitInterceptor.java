@@ -2,7 +2,7 @@ package com.ruoyi.framework.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ruoyi.common.annotation.RepeatSubmit;
-import com.ruoyi.common.core.domain.AjaxResult;
+import com.ruoyi.common.model.base.AjaxResult;
 import com.ruoyi.common.utils.ServletUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;

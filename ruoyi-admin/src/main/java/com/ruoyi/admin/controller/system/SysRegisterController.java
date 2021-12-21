@@ -1,11 +1,11 @@
 package com.ruoyi.admin.controller.system;
 
-import com.ruoyi.common.core.controller.BaseController;
-import com.ruoyi.common.core.domain.AjaxResult;
-import com.ruoyi.common.core.domain.model.RegisterBody;
+import com.ruoyi.common.controller.BaseController;
+import com.ruoyi.common.model.base.AjaxResult;
+import com.ruoyi.common.model.dto.RegisterBody;
 import com.ruoyi.common.utils.StringUtils;
 import com.ruoyi.framework.web.service.SysRegisterService;
-import com.ruoyi.system.service.ISysConfigService;
+import com.ruoyi.system.service.intf.ISysConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

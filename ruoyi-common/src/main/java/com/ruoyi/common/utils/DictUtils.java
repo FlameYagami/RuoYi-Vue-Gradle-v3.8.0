@@ -1,7 +1,7 @@
 package com.ruoyi.common.utils;
 
 import com.ruoyi.common.constant.Constants;
-import com.ruoyi.common.core.domain.entity.SysDictData;
+import com.ruoyi.common.model.entity.SysDictData;
 import com.ruoyi.common.core.redis.RedisCache;
 import com.ruoyi.common.utils.spring.SpringUtils;
 

@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.system.domain.SysLogininfor;
+import com.ruoyi.system.model.entity.SysLogininfor;
 
 import java.util.List;
 

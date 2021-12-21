@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.system.domain.SysUserRole;
+import com.ruoyi.system.model.entity.SysUserRole;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

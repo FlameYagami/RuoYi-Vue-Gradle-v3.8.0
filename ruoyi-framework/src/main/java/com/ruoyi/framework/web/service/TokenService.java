@@ -1,7 +1,7 @@
 package com.ruoyi.framework.web.service;
 
 import com.ruoyi.common.constant.Constants;
-import com.ruoyi.common.core.domain.model.LoginUser;
+import com.ruoyi.common.model.dto.LoginUser;
 import com.ruoyi.common.core.redis.RedisCache;
 import com.ruoyi.common.utils.ServletUtils;
 import com.ruoyi.common.utils.StringUtils;

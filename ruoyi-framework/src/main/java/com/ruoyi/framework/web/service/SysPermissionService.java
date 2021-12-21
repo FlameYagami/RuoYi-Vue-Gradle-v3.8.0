@@ -1,8 +1,8 @@
 package com.ruoyi.framework.web.service;
 
-import com.ruoyi.common.core.domain.entity.SysUser;
-import com.ruoyi.system.service.ISysMenuService;
-import com.ruoyi.system.service.ISysRoleService;
+import com.ruoyi.common.model.entity.SysUser;
+import com.ruoyi.system.service.intf.ISysMenuService;
+import com.ruoyi.system.service.intf.ISysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

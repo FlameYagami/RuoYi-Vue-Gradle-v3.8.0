@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.system.domain.SysPost;
+import com.ruoyi.system.model.entity.SysPost;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.system.domain.SysOperLog;
+import com.ruoyi.system.model.entity.SysOperLog;
 
 import java.util.List;
 

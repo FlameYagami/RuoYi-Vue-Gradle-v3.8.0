@@ -3,8 +3,8 @@ package com.ruoyi.generator.util;
 import com.ruoyi.common.constant.GenConstants;
 import com.ruoyi.common.utils.StringUtils;
 import com.ruoyi.generator.config.GenConfig;
-import com.ruoyi.generator.domain.GenTable;
-import com.ruoyi.generator.domain.GenTableColumn;
+import com.ruoyi.generator.model.GenTable;
+import com.ruoyi.generator.model.GenTableColumn;
 import org.apache.commons.lang3.RegExUtils;
 
 import java.util.Arrays;

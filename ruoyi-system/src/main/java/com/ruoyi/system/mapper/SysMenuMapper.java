@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.common.core.domain.entity.SysMenu;
+import com.ruoyi.common.model.entity.SysMenu;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

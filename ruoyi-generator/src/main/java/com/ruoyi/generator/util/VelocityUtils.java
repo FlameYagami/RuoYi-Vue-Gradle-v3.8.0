@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.ruoyi.common.constant.GenConstants;
 import com.ruoyi.common.utils.DateUtils;
 import com.ruoyi.common.utils.StringUtils;
-import com.ruoyi.generator.domain.GenTable;
-import com.ruoyi.generator.domain.GenTableColumn;
+import com.ruoyi.generator.model.GenTable;
+import com.ruoyi.generator.model.GenTableColumn;
 import org.apache.velocity.VelocityContext;
 
 import java.util.ArrayList;

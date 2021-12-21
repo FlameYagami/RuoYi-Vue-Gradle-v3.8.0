@@ -1,14 +1,14 @@
 package com.ruoyi.admin.controller.system;
 
 import com.ruoyi.common.constant.Constants;
-import com.ruoyi.common.core.domain.AjaxResult;
-import com.ruoyi.common.core.domain.entity.SysMenu;
-import com.ruoyi.common.core.domain.entity.SysUser;
-import com.ruoyi.common.core.domain.model.LoginBody;
+import com.ruoyi.common.model.base.AjaxResult;
+import com.ruoyi.common.model.entity.SysMenu;
+import com.ruoyi.common.model.entity.SysUser;
+import com.ruoyi.common.model.dto.LoginBody;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.framework.web.service.SysLoginService;
 import com.ruoyi.framework.web.service.SysPermissionService;
-import com.ruoyi.system.service.ISysMenuService;
+import com.ruoyi.system.service.intf.ISysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

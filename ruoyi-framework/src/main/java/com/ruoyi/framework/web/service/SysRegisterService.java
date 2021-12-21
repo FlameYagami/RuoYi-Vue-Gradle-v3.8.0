@@ -2,8 +2,8 @@ package com.ruoyi.framework.web.service;
 
 import com.ruoyi.common.constant.Constants;
 import com.ruoyi.common.constant.UserConstants;
-import com.ruoyi.common.core.domain.entity.SysUser;
-import com.ruoyi.common.core.domain.model.RegisterBody;
+import com.ruoyi.common.model.entity.SysUser;
+import com.ruoyi.common.model.dto.RegisterBody;
 import com.ruoyi.common.core.redis.RedisCache;
 import com.ruoyi.common.exception.user.CaptchaException;
 import com.ruoyi.common.exception.user.CaptchaExpireException;
@@ -12,8 +12,8 @@ import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.StringUtils;
 import com.ruoyi.framework.manager.AsyncManager;
 import com.ruoyi.framework.manager.factory.AsyncFactory;
-import com.ruoyi.system.service.ISysConfigService;
-import com.ruoyi.system.service.ISysUserService;
+import com.ruoyi.system.service.intf.ISysConfigService;
+import com.ruoyi.system.service.intf.ISysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

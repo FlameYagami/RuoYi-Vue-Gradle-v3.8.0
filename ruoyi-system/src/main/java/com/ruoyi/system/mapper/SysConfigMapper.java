@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.system.domain.SysConfig;
+import com.ruoyi.system.model.entity.SysConfig;
 
 import java.util.List;
 

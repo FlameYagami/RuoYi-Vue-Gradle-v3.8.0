@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.common.core.domain.entity.SysDictType;
+import com.ruoyi.common.model.entity.SysDictType;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

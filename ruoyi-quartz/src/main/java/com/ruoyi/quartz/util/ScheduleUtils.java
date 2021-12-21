@@ -3,7 +3,7 @@ package com.ruoyi.quartz.util;
 import com.ruoyi.common.constant.ScheduleConstants;
 import com.ruoyi.common.exception.job.TaskException;
 import com.ruoyi.common.exception.job.TaskException.Code;
-import com.ruoyi.quartz.domain.SysJob;
+import com.ruoyi.quartz.model.SysJob;
 import org.quartz.*;
 
 /**

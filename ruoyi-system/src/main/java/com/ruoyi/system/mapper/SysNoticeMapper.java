@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.system.domain.SysNotice;
+import com.ruoyi.system.model.entity.SysNotice;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.ruoyi.system.mapper;
 
-import com.ruoyi.system.domain.SysRoleDept;
+import com.ruoyi.system.model.entity.SysRoleDept;
 
 import java.util.List;
 

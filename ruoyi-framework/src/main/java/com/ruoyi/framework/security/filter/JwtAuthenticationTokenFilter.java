@@ -1,6 +1,6 @@
 package com.ruoyi.framework.security.filter;
 
-import com.ruoyi.common.core.domain.model.LoginUser;
+import com.ruoyi.common.model.dto.LoginUser;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.StringUtils;
 import com.ruoyi.framework.web.service.TokenService;

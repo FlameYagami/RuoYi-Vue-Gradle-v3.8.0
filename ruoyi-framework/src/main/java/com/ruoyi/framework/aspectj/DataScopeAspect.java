@@ -1,10 +1,10 @@
 package com.ruoyi.framework.aspectj;
 
 import com.ruoyi.common.annotation.DataScope;
-import com.ruoyi.common.core.domain.BaseEntity;
-import com.ruoyi.common.core.domain.entity.SysRole;
-import com.ruoyi.common.core.domain.entity.SysUser;
-import com.ruoyi.common.core.domain.model.LoginUser;
+import com.ruoyi.common.model.base.BaseEntity;
+import com.ruoyi.common.model.entity.SysRole;
+import com.ruoyi.common.model.entity.SysUser;
+import com.ruoyi.common.model.dto.LoginUser;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.StringUtils;
 import org.aspectj.lang.JoinPoint;

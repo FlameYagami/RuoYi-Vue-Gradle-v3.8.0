@@ -1,15 +1,15 @@
 package com.ruoyi.generator.controller;
 
 import com.ruoyi.common.annotation.Log;
-import com.ruoyi.common.core.controller.BaseController;
-import com.ruoyi.common.core.domain.AjaxResult;
+import com.ruoyi.common.controller.BaseController;
+import com.ruoyi.common.model.base.AjaxResult;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.core.text.Convert;
 import com.ruoyi.common.enums.BusinessType;
-import com.ruoyi.generator.domain.GenTable;
-import com.ruoyi.generator.domain.GenTableColumn;
-import com.ruoyi.generator.service.IGenTableColumnService;
-import com.ruoyi.generator.service.IGenTableService;
+import com.ruoyi.generator.model.GenTable;
+import com.ruoyi.generator.model.GenTableColumn;
+import com.ruoyi.generator.service.intf.IGenTableColumnService;
+import com.ruoyi.generator.service.intf.IGenTableService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

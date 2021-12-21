@@ -1,6 +1,6 @@
 package com.ruoyi.quartz.mapper;
 
-import com.ruoyi.quartz.domain.SysJobLog;
+import com.ruoyi.quartz.model.SysJobLog;
 
 import java.util.List;
 
