@@ -1,0 +1,11 @@
+description = 'ruoyi-generator'
+
+jar.enabled = true
+bootJar.enabled = false
+
+dependencies {
+    implementation project(':ruoyi-common')
+
+    implementation 'org.apache.velocity:velocity-engine-core:2.3'
+    implementation 'commons-collections:commons-collections:3.2.2'
+}

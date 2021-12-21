@@ -1,0 +1,14 @@
+description = 'ruoyi-admin'
+
+dependencies {
+    implementation project(':ruoyi-framework')
+    implementation project(':ruoyi-quartz')
+    implementation project(':ruoyi-generator')
+
+    implementation 'org.springframework.boot:spring-boot-devtools:2.5.6'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    implementation 'io.swagger:swagger-models:1.6.2'
+    implementation 'mysql:mysql-connector-java:8.0.27'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+}
+

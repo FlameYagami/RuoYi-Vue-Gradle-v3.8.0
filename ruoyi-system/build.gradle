@@ -1,0 +1,8 @@
+description = 'ruoyi-system'
+
+jar.enabled = true
+bootJar.enabled = false
+
+dependencies {
+    implementation project(':ruoyi-common')
+}
