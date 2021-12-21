@@ -4,7 +4,7 @@ spring:
     # 开发环境
     active: "dev"
     # 正式环境
-#    active: "prod"
+    #    active: "prod"
     group:
       "dev": "common,db-dev,dev"
       "prod": "common,db-prod,prod"
