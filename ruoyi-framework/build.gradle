@@ -1,13 +1,13 @@
+group 'com.ruoyi.framework'
 description = 'ruoyi-framework'
 
 jar.enabled = true
 bootJar.enabled = false
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.6'
-    implementation 'org.springframework.boot:spring-boot-starter-aop:2.5.6'
-    implementation 'com.alibaba:druid-spring-boot-starter:1.2.8'
-    implementation 'com.github.penggle:kaptcha:2.3.2'
-    implementation 'com.github.oshi:oshi-core:5.8.2'
+    implementation project(':ruoyi-common')
     implementation project(':ruoyi-system')
+
+    api "com.github.penggle:kaptcha:${kaptchaVersion}"
+    api "com.github.oshi:oshi-core:${oshiVersion}"
 }

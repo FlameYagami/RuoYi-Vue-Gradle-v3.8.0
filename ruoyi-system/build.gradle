@@ -1,3 +1,4 @@
+group 'com.ruoyi.system'
 description = 'ruoyi-system'
 
 jar.enabled = true

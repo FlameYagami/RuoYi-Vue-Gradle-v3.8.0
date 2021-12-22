@@ -48,12 +48,3 @@ logging:
   config: classpath:config/log4j2-prod.yml
 
 buildVariant: prod
-
-baseUrl:
-  host: http://localhost/
-  paper: http://localhost/image/contract/paper/
-  signature: http://localhost/contract/signature/
-
-filePath:
-  paper: D:/image/contract/paper/
-  signature: D:/image/contract/signature/

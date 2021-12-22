@@ -5,6 +5,8 @@ bootJar.enabled = false
 
 dependencies {
     implementation project(':ruoyi-common')
+    implementation project(':ruoyi-system')
+    implementation project(':ruoyi-framework')
 
     implementation 'org.apache.velocity:velocity-engine-core:2.3'
     implementation 'commons-collections:commons-collections:3.2.2'

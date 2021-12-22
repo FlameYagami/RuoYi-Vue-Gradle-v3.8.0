@@ -1,9 +1,11 @@
+group 'com.ruoyi.quartz'
 description = 'ruoyi-quartz'
 
 jar.enabled = true
 bootJar.enabled = false
 
 dependencies {
-    implementation 'org.quartz-scheduler:quartz:2.3.2'
     implementation project(':ruoyi-common')
+
+    implementation "org.quartz-scheduler:quartz:${quartzVersion}"
 }
