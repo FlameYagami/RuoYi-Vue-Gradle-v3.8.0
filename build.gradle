@@ -55,6 +55,8 @@ subprojects {
         druidVersion = '1.2.8'
         mybatisplusVersion = '3.4.3.4'
 
+        log4jVersion = '2.17.0'
+
         gsonVersion = "2.8.9"
         fastjsonVersion = "1.2.78"
 
@@ -75,18 +77,14 @@ subprojects {
     }
 
     configurations {
-//        // 强制依赖版本
-//        compileClasspath.resolutionStrategy {
-//            eachDependency { details ->
-//                if (details.requested.group == 'org.apache.logging.log4j') {
-//                    details.useVersion '2.17.0'
-//                }
-//            }
-//        }
-        // 排除 logback 依赖（使用 log4j2）
-        implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-        // 防止进入swagger页面报类型转换错误，排除3.0.0中的引用，手动增加1.6.2版本
-        implementation.exclude group: 'io.springfox', module: 'io.swagger'
+        implementation {
+            // 排除 logback 依赖（使用 log4j2）
+            exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+            // 排除 spring-boot-starter-log4j2 中的低版本
+            exclude group: 'org.springframework.boot:spring-boot-starter-log4j2', module: 'log4j-api, log4j-core'
+            // 防止进入swagger页面报类型转换错误，排除3.0.0中的引用，手动增加1.6.2版本
+            exclude group: 'io.springfox', module: 'io.swagger'
+        }
     }
 
     dependencies {
@@ -94,8 +92,11 @@ subprojects {
 
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.boot:spring-boot-starter-aop'
-        implementation 'org.springframework.boot:spring-boot-starter-log4j2'
         implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+        implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+
+        implementation "org.apache.logging.log4j:log4j-core:${log4jVersion}"
+        implementation "org.apache.logging.log4j:log4j-api:${log4jVersion}"
 
         runtimeOnly 'mysql:mysql-connector-java'
 
